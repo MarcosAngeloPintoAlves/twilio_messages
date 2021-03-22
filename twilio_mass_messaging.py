@@ -7,6 +7,7 @@
 from twilio.rest import Client
 import pandas as pd
 sm_id = []
+#load your dataset with numbers
 numeros = pd.read_csv('datasets/numeros.csv')
 numeros.head()
 
@@ -43,6 +44,7 @@ num_sms
 
 
 #Mandando mensagens por meio do WhatsApp
+#change +xx according to the country code
 
 account_sid = "your_twilio_acc_sid"
 auth_token  = "your_twilio_auth_token"
