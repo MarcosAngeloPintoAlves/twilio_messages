@@ -22,6 +22,7 @@ num_conv
 
 
 #formatando o número para whatsapp
+#change +xx according to the country code
 num = []
 for j in range(len(num_conv)):
     num.append("whatsapp:+55"+str(num_conv[j]))
@@ -51,7 +52,7 @@ client = Client(account_sid, auth_token)
 for i in range(len(num)):
     message = client.messages.create(
              from_='whatsapp:+your_twilio_number',
-             body='Olá, bom dia! Para prosseguirmos com o seu atendimento entre em contato pelo e-mail: time@contasimples.com. \nObrigado pela preferência!',
+             body='Here is where the message goes!',
              to=num[i]
          )
 
@@ -73,7 +74,7 @@ for i in range(len(num_sms)):
     message = client.messages.create(
         to=num_sms[i], 
         from_="+your_twilio_number",
-        body="Olá, bom dia! Para prosseguirmos com o seu atendimento entre em contato pelo e-mail: time@contasimples.com. Obrigado pela preferência!")
+        body="Here is where the message goes!")
     print(message.sid)
     sm_id.append(message.sid)
 
